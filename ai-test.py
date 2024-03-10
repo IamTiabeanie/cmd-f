@@ -37,12 +37,11 @@ def ai_training_database_creator(snakes_type, height, width, name):
         image_holder.append(image)
     pickle.dump(image_holder, open(name + '.p', "wb"))
 
+#final iternation of data set - next labeling
+
 ai_training_database_creator(snakes_type = snakes_train, height = image_resize, width = image_resize, name = "train")
 ai_training_database_creator(snakes_type = snakes_test, height = image_resize, width = image_resize, name = "test")
 training_set = pickle.load(open("train.p", "rb"))
 test_set = pickle.load(open("test.p", "rb"))
 
-
-lum_img = test_set[100]
-plt.imshow(lum_img)
-plt.show()
+label.test = pd.read_csv("")
